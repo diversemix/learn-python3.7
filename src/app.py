@@ -7,7 +7,7 @@ import json
 from flask import Flask
 from logger import initLogger
 from flask_sqlalchemy import SQLAlchemy
-from test_app import Service
+from widget import WidgetService
 
 SERVICE_CONFIG = './config.json'
 LOG_PATH = './service.log'
@@ -42,6 +42,6 @@ if __name__ == '__main__':
     # https://stackoverflow.com/questions/36877914/flask-sqlalchemy-on-the-fly-connections-to-multiple-databases
     db = SQLAlchemy(app)
 
-    test_app = Service(db)
-    app.register_blueprint(test_app.get_api(), url_prefix='/v1')
+    widget_service = WidgetService(db)
+    app.register_blueprint(widget_service.get_api(), url_prefix='/v1')
     app.run(host="0.0.0.0", port=5000)

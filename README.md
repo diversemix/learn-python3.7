@@ -1,7 +1,13 @@
 # learn-python3.7
 Learn what's new in python 3.7
+----
 
-## Installation
+The README for the code is in a file called [CODE.md](https://github.com/diversemix/learn-python3.7/blob/master/CODE.md)
+whereas the reset of this README are notes on my learning of python 3.7
+
+---
+
+## Installing Python 3.7
 
 I followed [these instructions](https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/)
 to install on Ubuntu 18.04.
@@ -64,4 +70,4 @@ For example: `clock_gettime_ns()`
 ## References
 
 - [What's new in Python](https://docs.python.org/release/3.7.4/whatsnew/index.html)
-- []
+
