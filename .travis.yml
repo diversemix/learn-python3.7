@@ -6,15 +6,16 @@ env:
 services:
   - docker
 
-script:
-  - make -j 4 unit_test
-
 stages:
+  - name: Build
   - name: Test
 
 jobs:
   include:
+    - stage: Build
+      name: "Build"
+      script: make build
     - stage: Test
       name: "Unit Tests"
-      script: make unit_test_ci
+      script: make unit_test
 
