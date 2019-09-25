@@ -1,6 +1,9 @@
 # learn-python3.7
+
 Learn what's new in python 3.7
 ----
+
+[![Build Status](https://travis-ci.com/diversemix/learn-python3.7.svg?branch=master)](https://travis-ci.com/diversemix/learn-python3.7)
 
 The README for the code is in a file called [CODE.md](https://github.com/diversemix/learn-python3.7/blob/master/CODE.md)
 whereas the reset of this README are notes on my learning of python 3.7
