@@ -6,7 +6,7 @@ help:
 .DEFAULT_GOAL=help
 
 unit_test: build
-	docker-compose up python-test
+	docker-compose up python-test || (echo "unit_test failed $$?"; exit 1)
 
 build:
-	docker-compose build
+	docker-compose build || (echo "build failed $$?"; exit 1)
