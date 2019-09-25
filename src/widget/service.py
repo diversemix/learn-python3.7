@@ -1,10 +1,8 @@
-from widget.controller import WidgetController
-from widget.singleton import Singleton
-from widget.api import Api
+from .singleton import Singleton
 
 class WidgetService(object, metaclass=Singleton):
-    """ The WidgetService acts like a factory to create the WidgetController 
-    and the associated API. 
+    """ The WidgetService acts like a factory to create the WidgetController
+    and the associated API.
     """
     def __init__(self, db):
       self._controller = WidgetController(db)

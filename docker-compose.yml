@@ -2,9 +2,18 @@ version: '2'
 
 services:
   python-app:
-        restart: always
-        build: ./src/
-        ports:
-            - "5000:5000"
-        environment:
-            - DEBUG=1
+    restart: always
+    working_dir: "/opt/app"
+    build: ./src/
+    ports:
+      - "5000:5000"
+    environment:
+      - DEBUG=1
+
+  python-test:
+    working_dir: "/opt/app"
+    build: ./src/
+    command: [ "pytest"]
+    environment:
+      - DEBUG=1
+

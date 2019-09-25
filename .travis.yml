@@ -1,0 +1,24 @@
+language: minimal
+env:
+  global:
+    - IMAGE_TAG=$TRAVIS_COMMIT
+
+services:
+  - docker
+
+script:
+  - make -j 4 unit_test
+
+stages:
+  - name: Test
+
+jobs:
+  include:
+    - stage: Test
+      name: "Unit Tests"
+      script: make unit_test_ci
+
+if: |
+    branch = master OR \
+    tag IS present OR \
+    type = pull_request
