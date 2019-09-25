@@ -1,4 +1,4 @@
-language: minimal
+language: python
 env:
   global:
     - IMAGE_TAG=$TRAVIS_COMMIT
@@ -18,7 +18,3 @@ jobs:
       name: "Unit Tests"
       script: make unit_test_ci
 
-if: |
-    branch = master OR \
-    tag IS present OR \
-    type = pull_request
