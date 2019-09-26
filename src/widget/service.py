@@ -1,4 +1,6 @@
+from .controller import WidgetController
 from .singleton import Singleton
+from .api import Api
 
 class WidgetService(object, metaclass=Singleton):
     """ The WidgetService acts like a factory to create the WidgetController
