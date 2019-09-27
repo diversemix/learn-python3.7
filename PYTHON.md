@@ -2,8 +2,7 @@
 
 > Learn what's new in python 3.7
 ----
-
-[![Build Status](https://travis-ci.com/diversemix/learn-python3.7.svg?branch=master)](https://travis-ci.com/diversemix/learn-python3.7)
+[What's new in Python 3.7.4](https://docs.python.org/release/3.7.4/whatsnew/index.html)
 
 ## Installing Python 3.7
 
@@ -66,6 +65,3 @@ Resolution is now in nano-seconds (ns) since epoch. Makes calculations a whole l
 New functions typically end in `_ns` to denote the function is returning the time in ns.
 For example: `clock_gettime_ns()`
 
-## References
-
-- [What's new in Python](https://docs.python.org/release/3.7.4/whatsnew/index.html)

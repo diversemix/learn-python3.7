@@ -4,11 +4,11 @@ from ..widget.service import WidgetService
 # https://github.com/pallets/jinja/issues/969
 
 def test_service_has_controller(mocker):
-    db = mocker.Mock()
-    widget_service = WidgetService(db)
+    config = mocker.Mock()
+    widget_service = WidgetService(config)
     assert widget_service.get_controller() is not None
 
 def test_service_has_api(mocker):
-    db = mocker.Mock()
-    widget_service = WidgetService(db)
+    config = mocker.Mock()
+    widget_service = WidgetService(config)
     assert widget_service.get_api() is not None

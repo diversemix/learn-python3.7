@@ -1,3 +1,4 @@
 {
-    "message" : "hello world!"
+    "message" : "hello world!",
+    "database_uri": "./test.sqlite3"
 }
