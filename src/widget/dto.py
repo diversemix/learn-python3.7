@@ -1,6 +1,7 @@
+from typing import List
 from dataclasses import dataclass, field
-import typing
 import uuid
+
 
 @dataclass(order=True)
 class WidgetDto(object):
@@ -8,7 +9,7 @@ class WidgetDto(object):
     name: str = field(compare=False)
     weight_kg: float = field(compare=True)
 
-    def values(self):
+    def values(self) -> List[str]:
         return [
           str(self.id),
           self.name,

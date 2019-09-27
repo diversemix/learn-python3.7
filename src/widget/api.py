@@ -3,7 +3,6 @@
 
 import logging
 from flask import Blueprint
-from flask import current_app
 from flask import request
 from flask import jsonify
 
@@ -15,9 +14,10 @@ HTTP_400_BAD_REQUEST = 400
 class Api(object):
     v1_blueprint = Blueprint('v1', 'v1_blueprint') # Create a versioned API
     controller = None
+
     def __init__(self, controller):
         self.controller = controller
-        
+
     @staticmethod
     @v1_blueprint.route('/widgets', methods=['GET'])
     def get_widgets():

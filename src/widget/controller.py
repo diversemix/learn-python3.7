@@ -1,5 +1,5 @@
-import json
 from .dto import WidgetDto
+
 
 class WidgetController(object):
     """ The WidgetController contains just the business-logic.
@@ -7,17 +7,16 @@ class WidgetController(object):
     """
     def __init__(self, repo):
         self._repo = repo
-        n_widgets = len(self.get_all())
+        n_widgets = len(self.get_all_widgets())
         if (n_widgets == 0):
-          self.create_widget()
-          self.get_all()
+            self.create_widget()
+            self.get_all_widgets()
 
-    def get_all(self):
-        return self._repo.get_all()
+    def get_all_widgets(self):
+        return self._repo.get_all_widgets()
 
-    def create_widget(self, dto = None):
-        if (dto == None):
+    def create_widget(self, dto=None):
+        if (dto is None):
             dto = WidgetDto(name='paper clip', weight_kg=0.005)
 
         self._repo.add_widget(dto)
-
